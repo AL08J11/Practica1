@@ -29,5 +29,17 @@ $(document).ready(  function(e){
 			navigator.notification.alert("Desliz&oacute; a la derecha",function(){
 			},"Practica 1","Aceptar")
 		});
+		$("izquierda").swipeleft(function(){ navigator.notification.confirm('¿que decea hacer?',funtion(opcion){
+			switch(opcion){
+				case 1: 
+					navigator.notification.beep(1)
+				break
+				case 2 :
+					navigator.notification.vibrate(500)
+				break
+					
+			}//switch
+		},"practica1","beep,vibrar,cancelar");//confirm
+		});//function swipe
 	},false);
 });
